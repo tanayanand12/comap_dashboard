@@ -24,17 +24,17 @@ def pickle_load(file_path):
 
 
 # dict url
-hpo_disease_dict_path = 'pickled_dictonaries\hpo_disease_dict.pickle'
+hpo_disease_dict_path = './pickled_dictonaries/hpo_disease_dict.pickle'
 
-disease_hpo_dict_path = 'pickled_dictonaries\disease_hpo_dict.pickle'
+disease_hpo_dict_path = './pickled_dictonaries/disease_hpo_dict.pickle'
 
-disease_name_dict_path = 'pickled_dictonaries\disease_name_dict.pickle'
+disease_name_dict_path = './pickled_dictonaries/disease_name_dict.pickle'
 
-hpid_vpk_label_dict_path = 'pickled_dictonaries\hpid_vpk_label_dict.pickle'
+hpid_vpk_label_dict_path = './pickled_dictonaries/hpid_vpk_label_dict.pickle'
 
-hpid_descriptions_dict_path = 'pickled_dictonaries\hpid_descriptions_dict.pickle'
+hpid_descriptions_dict_path = './pickled_dictonaries/hpid_descriptions_dict.pickle'
 
-disease_vpk_count_dict_path =  'pickled_dictonaries\disease_vpk_count_dict.pickle'
+disease_vpk_count_dict_path =  './pickled_dictonaries/disease_vpk_count_dict.pickle'
 
 # loading dicts
 disease_hpo_dict = pickle_load(disease_hpo_dict_path)
