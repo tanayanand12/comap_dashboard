@@ -88,7 +88,7 @@ def fetch_corresp_diseases(hpid):
 
 def fetch_disease_vpk_count(disease_id):
   disease_vpk_count_list = disease_vpk_count_dict[disease_id]
-  disease_vpk_count_df = pd.DataFrame(disease_vpk_count_list).T
+  disease_vpk_count_df = pd.DataFrame(disease_vpk_count_list)
   disease_vpk_count_df.columns = ['V Count', 'P Count', 'K Count']
   return disease_vpk_count_list
 
