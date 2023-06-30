@@ -79,7 +79,7 @@ def fetch_corresp_diseases(hpid):
   for i in disease_list:
     temp_disease_name_dict[i].append(disease_name_dict[i])
   disease_name_df = pd.DataFrame.from_dict(temp_disease_name_dict).T
-  return temp_disease_name_dict
+  return disease_name_df
 
 # test
 # fetch_corresp_diseases("HP:0004840")
