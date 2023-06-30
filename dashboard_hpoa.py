@@ -68,7 +68,9 @@ def fetch_hpid_descriptions(hpid):
 
 def fetch_hpid_vpk_label(hpid):
   hpid_vpk_label_list = hpid_vpk_label_dict[hpid]
-  return hpid_vpk_label_list
+  hpid_vpk_label_df = pd.DataFrame(hpid_vpk_label_list).T
+  hpid_vpk_label_df.columns = ['V Label', 'P Label', 'K Label']
+  return hpid_vpk_label_df
 
 # test
 # type(fetch_hpid_vpk_label("HP:0004840"))
@@ -86,6 +88,8 @@ def fetch_corresp_diseases(hpid):
 
 def fetch_disease_vpk_count(disease_id):
   disease_vpk_count_list = disease_vpk_count_dict[disease_id]
+  disease_vpk_count_df = pd.DataFrame(disease_vpk_count_list).T
+  disease_vpk_count_df.columns = ['V Count', 'P Count', 'K Count']
   return disease_vpk_count_list
 
 def disease_details(disease_id):
