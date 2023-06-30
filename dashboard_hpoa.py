@@ -7,12 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1fxFPzKAqlPUcpNcgcTxA4QFh90sWrz_5
 """
 
-# !pip install gradio
 
-# import gradio as gr
-
-import numpy
-import pandas
+import numpy as np
+import pandas as pd
 import pickle
 
 from collections import defaultdict
@@ -52,7 +49,8 @@ def fetch_hpids(disease_id):
     # print(hpid_descriptions_dict[i], '\n')
     temp_hpid_name_dict[i].append(hpid_descriptions_dict[i])
   # print(temp_hpid_name_dict)
-  return temp_hpid_name_dict
+  hpid_name_df = pd.DataFrame.from_dict(temp_hpid_name_dict).T
+  return hpid_name_df
 
 #test
 # type(fetch_hpids('OMIM:301040'))
@@ -80,6 +78,7 @@ def fetch_corresp_diseases(hpid):
   temp_disease_name_dict = defaultdict(list)
   for i in disease_list:
     temp_disease_name_dict[i].append(disease_name_dict[i])
+  disease_name_df = pd.DataFrame.from_dict(temp_disease_name_dict).T
   return temp_disease_name_dict
 
 # test
